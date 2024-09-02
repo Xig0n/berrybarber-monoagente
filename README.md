@@ -31,4 +31,4 @@ Visita [builderbot](https://www.builderbot.app/en) para ver la documentacion com
 
 ## Contactanos
 - [💻 WEB](https://botberry.es)
-- 📧 Email ⇨ (mail:hello@botberry.es)
+- 📧 Email ⇨ hello@botberry.es
