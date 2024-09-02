@@ -9,7 +9,7 @@ const BaileysProviderOptions = {
     timeRelease: 10800000,    // Cleans up data every 3 hours (in milliseconds)
     groupsIgnore: true,
     readStatus: false,
-    // usePairingCode: true,
+    usePairingCode: true,
     phoneNumber: BUSINESS_NUMBER,
 };
 

@@ -1,10 +1,10 @@
 import { addKeyword, EVENTS } from '@builderbot/bot'
-import { BaileysProvider } from "@builderbot/provider-baileys";
 
 
-const locationEvent = addKeyword<BaileysProvider>(EVENTS.LOCATION)
+const locationEvent = addKeyword(EVENTS.LOCATION)
     .addAction(async (ctx, {provider,  flowDynamic }) => {
         await flowDynamic('No me envies tu localizacion 📍, mejor te envio la mia 😉') 
+        
         await provider.vendor.sendMessage(
             ctx.key.remoteJid, {
             location: {

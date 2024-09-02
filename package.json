@@ -13,9 +13,9 @@
   "keywords": [],
   "dependencies": {
     "@builderbot-plugins/openai-assistants": "^0.0.2",
-    "@builderbot/bot": "1.1.7",
-    "@builderbot/database-mongo": "1.1.7",
-    "@builderbot/provider-baileys": "1.1.7",
+    "@builderbot/bot": "^1.2.2",
+    "@builderbot/database-mongo": "1.2.2",
+    "@builderbot/provider-baileys": "1.2.2",
     "axios": "latest",
     "dotenv": "^16.4.5",
     "google-auth-library": "^9.14.0",
@@ -26,10 +26,10 @@
     "@types/node": "^20.12.8",
     "eslint": "latest",
     "eslint-plugin-builderbot": "latest",
+    "nodemon": "latest",
     "rollup": "^4.10.0",
     "rollup-plugin-typescript2": "^0.36.0",
-    "tsx": "^4.7.1",
-    "nodemon": "latest"
+    "tsx": "^4.7.1"
   },
   "author": "",
   "license": "ISC"

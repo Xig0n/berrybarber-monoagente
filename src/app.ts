@@ -32,6 +32,32 @@ const main = async () => {
             concurrencyLimit: 50 // 👌
         }
     });
+
+
+    adapterProvider.server.post(
+        '/v1/blacklist',
+        handleCtx(async (bot, req, res) => {
+            const { number, action } = req.body
+            if (bot?.blacklist.checkIf(number)) {
+                if (action === 'remove') bot?.blacklist.remove(number)
+            } else {
+                if (action === 'add') bot?.blacklist.add(number)    
+            }
+                
+
+            res.writeHead(200, { 'Content-Type': 'application/json' })
+            return res.end(JSON.stringify({ status: 'ok', number, action }))
+        })
+    )
+
+    adapterProvider.server.get(
+        '/v1/getAuthCode',
+        handleCtx(async (bot, req , res) => {
+            const authCode = provider.vendor.authState.creds.pairingCode
+            res.writeHead(200, { 'Content-Type': 'application/json' })
+            return res.end(JSON.stringify({ code: authCode }))
+        })
+    )
     
     provider.on('message', async (ctx: any) => {
         // CHECK IF THE MESSAGE IS AN ORDER
@@ -82,6 +108,7 @@ const main = async () => {
             }
         }
     });
+
     setInterval(async () => {
         await checkEvents(provider);
     }, INTERVAL_CALENDAR_TIME);
