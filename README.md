@@ -8,8 +8,11 @@ Este bot esta pensado para la gestion de citas en una peluqueria, ofrece las sig
 
 ## Instalacion
 
+1. Añadir tu Oauth token en src/calendar/calendarAPI.json
+2. Añádir todas las variables de entorno necesarias
+
 ```
-git clone xxx
+git clone git@github.com:Xig0n/berrybarber-monoagente.git
 npm install
 npm build
 npm start
